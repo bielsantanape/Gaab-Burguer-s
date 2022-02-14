@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Gaab Burguers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link href="estilo/style.css" rel="stylesheet" />
+	<link href="estilo/form.css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A melhor hamburgueria do RJ" >
+	<meta name="keywords" content="Hambúguer,Hambúrguer gostoso,Hambúrgueria RJ" >
+	<meta charset="utf-8" />
+</head>
+<body>
+    <header>
+        <div class="center">
+            <div class="logo"><img src="images/logo.png" width=300 height=300 /> </div>
+		    <nav class="desktop center">
+		        <ul>
+			        <li><a href="index.html" title="Home" class="icon-item">Home</a></li>
+                    <span class="hidden-md">
+                        <img src="images/home.png" alt="home" title="home">
+                    </span>
+			        <li><a href="cardapio.html" title="Cardápio" class="icon-item">Cardápio</a></li>
+                    <span class="hidden-md">
+                        <img src="images/cardapio.png">
+                    </span>
+			        <li><a href="contato.html" title="Contato" class="icon-item">Contato</a></li>
+			        <span class="hidden-md">
+                        <img src="images/contato.png">
+                    </span>
+			    </ul>
+		    </nav>
+		    <nav class="mobile center">
+		        <ul>
+			        <li><a href="">Home</a></li>
+			        <li><a href="">Cardápio</a></li>
+			        <li><a href="">Faça seu pedido</a></li>
+			        <li><a href="">Contato</a></li>
+			    </ul>
+		    </nav>
+	    <div class="clear"></div>
+	    </div>
+	</header>
+
+
+
+    <section class="descricao-hamburgueria"> </section>
+	    <div class="w50 left">
+	    <h1>Contato</h1>
+        <form name="meu_form">
+            <h2>Preencha o formulário e nos envie uma mensagem.</h2>
+            <input type="text" id="nomeid" placeholder="Nome" required="required" name="nome" />
+            <label for="nome">Nome</label>
+            <input type="tel" id="foneid" placeholder="Telefone" name="fone" />
+            <label for="fone">Fone</label>
+            <input type="email" id="emailid" placeholder="Email" name="email" />
+            <label for="email">Email</label>
+            <textarea placeholder="Deixe sua opinião"></textarea>
+            <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+        </form>
+        </div>
+		<div class="w50 left">
+	    </div>
+	    <div class="clear"></div>
+<script>
+	function Enviar() {
+    var nome = document.getElementById("nomeid");
+    if (nome.value != "") {
+        alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
+    }
+}
+</script>
+<footer style="color:white" align=center> 
+    <div class="center">
+		<p>Gaab Burguer - Todos os direitos reservados</p>
+	</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Gaab Burguers</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	    <link href="estilo/style.css" rel="stylesheet" />
+	    <link href="estilo/form.css" rel="stylesheet" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="A melhor hamburgueria do RJ" >
+	    <meta name="keywords" content="Hambúguer,Hambúrguer gostoso,Hambúrgueria RJ" >
+	    <meta charset="utf-8" />
+	    <style>
+	    	#burguers,
+	    	#carrinho{
+	    		max-width: 1000px;
+	    		margin: 0 auto;
+	    		padding: 0 2%;
+	    		display: flex;
+	    		}
+	    			.produto-single{
+	    				width: 33.3%;
+	    				padding: 0 10px;
+	    				height: 10px;
+	    	    }
+	    	.row{
+				padding: 0 20px;
+			}
+			.section{
+				float:  left;
+				width: 75%;
+			}
+			.aside{
+				float: left;
+				width: 25%;
+				padding-left: 20px;
+				box-sizing: border-box;
+			}
+	    </style>
+    </head>
+    <body>
+    <header>
+        <div class="center">
+            <div class="logo"><img src="images/logo.png" width=300 height=300 /> </div>
+		    <nav class="desktop center">
+		        <ul>
+			        <li><a href="index.html" title="Home" class="icon-item">Home</a></li>
+                    <span class="hidden-md">
+                        <img src="images/home.png" alt="home" title="home">
+                    </span>
+			        <li><a href="cardapio.html" title="Cardápio" class="icon-item">Cardápio</a></li>
+                    <span class="hidden-md">
+                        <img src="images/cardapio.png">
+                    </span>
+			        <li><a href="contato.html" title="Contato" class="icon-item">Contato</a></li>
+			        <span class="hidden-md">
+                        <img src="images/contato.png">
+                    </span>
+			    </ul>
+		    </nav>
+		    <nav class="mobile center">
+		        <ul>
+			        <li><a href="">Home</a></li>
+			        <li><a href="">Cardápio</a></li>
+			        <li><a href="">Faça seu pedido</a></li>
+			        <li><a href="">Contato</a></li>
+			    </ul>
+		    </nav>
+	    <div class="clear"></div>
+	    </div>
+	</header>	
+		<div class="row">
+			<section>
+				<h2>Burguers:</h2>
+				<div id="burguers"></div>
+				<h2>Porções:</h2>
+				<h2>Bebidas:</h2>
+				<h2>Sobremesa:</h2>
+				<div id="carrinho"></div>
+				<h2>Carrinho:</h2>
+				    <script>
+				     	const items=[
+				     	    {
+				               id: 0,
+				               nome: 'Gaab Burguer',
+				               img: 'images/imagem1.jpg',
+				               quantidade: 0
+				     	    },
+				     	    {
+				               id: 1,
+				               nome: 'Cheeseburguer',
+				               img: 'images/imagem2.jpg',
+				               quantidade: 0
+				     	    },
+				     	    {
+				               id: 2,
+				               nome: 'Costela',
+				               img: 'images/imagem3.jpg',
+				               quantidade: 0
+				     	    },
+				     	    {
+				               id: 3,
+				               nome: 'Duplo-Bacon',
+				               img: 'images/imagem4.jpg',
+				               quantidade: 0
+				     	    },
+				     	    {
+				               id: 4,
+				               nome: 'Gaab Chicken',
+				               img: 'images/imagem5.jpg',
+				               quantidade: 0
+				     	    },
+				     	    {
+				               id: 5,
+				               nome: 'Smash Egg',
+				               img: 'images/imagem6.jpg',
+				               quantidade: 0
+				     	    },
+				     	    {
+				               id: 6,
+				               nome: 'Smash salada',
+				               img: 'images/imagem7.jpg',
+				               quantidade: 0
+				     	    },
+				     	    {
+				               id: 7,
+				               nome: 'Brie Burguer',
+				               img: 'images/imagem8.jpg',
+				               quantidade: 0
+				     	    },
+				     	         	    {
+				               id: 8,
+				               nome: 'Catupiry com Bacon',
+				               img: 'images/imagem9jpg',
+				               quantidade: 0
+				     	    },
+				     	         	    {
+				               id: 9,
+				               nome: 'Queijo Coalho',
+				               img: 'images/imagem10.jpg',
+				               quantidade: 0
+				     	    },
+				     	         	    {
+				               id: 10,
+				               nome: 'Anéis de Cebola',
+				               img: 'images/imagem11.jpg',
+				               quantidade: 0
+				     	    },
+				     	         	    {
+				               id: 11,
+				               nome: 'Batata Rústica',
+				               img: 'images/imagem12.jpg',
+				               quantidade: 0
+				     	    },
+				     	         	    {
+				               id: 12,
+				               nome: 'Fritas com Bacon',
+				               img: 'images/imagem13.jpg',
+				               quantidade: 0
+				     	    },
+				     	         	    {
+				               id: 13,
+				               nome: 'Palitos de Mussarela',
+				               img: 'images/imagem14.jpg',
+				               quantidade: 0
+				     	    },
+				     	         	    {
+				               id: 14,
+				               nome: 'Browie com Sorvete',
+				               img: 'images/imagem15.jpg',
+				               quantidade: 0
+				     	    },
+				     	         	    {
+				               id: 15,
+				               nome: 'Milkshake',
+				               img: 'images/imagem16.jpg',
+				               quantidade: 0
+				     	    },
+				     	         	    {
+				               id: 16,
+				               nome: 'Sucos',
+				               img: 'images/imagem17.jpg',
+				               quantidade: 0
+				     	    },
+				     	    {
+				               id: 17,
+				               nome: 'Refrigentante',
+				               img: 'images/imagem18.jpg',
+				               quantidade: 0
+				     	    },
+				     	    {
+				               id: 18,
+				               nome: 'Água',
+				               img: 'images/imagem19.jpg',
+				               quantidade: 0
+				     	    },
+				     	    {
+				               id: 19,
+				               nome: 'Heineken',
+				               img: 'images/imagem20.jpg',
+				               quantidade: 0
+				     	    },
+				     	]
+
+
+				     	inicializarLoja = () => {
+				     		var containerBurguers = document.getElementById('burguers');
+				     		items.map((val)=>{
+				     			containerBurguers.innerHTML+= `
+
+				     			<div class="burguers-single">
+				     			    <img scr="`+val.img+`" />
+				     			    <p>`+val.nome+`</p>
+				     			    <a key="`+val.id+`" href="">Adicionar ao carrinho!<a/>
+				     			</div>
+
+				     			`;
+				     		})
+				     	}
+
+				     	inicializarLoja();
+
+				     	atualizarCarrinho = () =>{
+				     		console.log(items);
+				     	}
+				        var links = document.getElementByTagName('a');
+				        for(var i = 0; i < links.lenght; i++){
+				        	links[i].addEventListenner("click",function(){
+				        		let key = this.getAttribute('key');
+				        		items[key].quantidade++;
+				        		atualizarCarrinho();
+				                return false;
+				        	})
+				        }
+
+				    </script>
+			</section>
+			<aside>
+						Fechado para reformas
+			</aside>
+		</div>
+		    <footer style="color:white" align=center> 
+		        <div class="center">
+				    <p>Gaab Burguer - Todos os direitos reservados</p>
+			    </div>
+		    </footer>
+    </body>
+</html>
